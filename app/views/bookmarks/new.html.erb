@@ -17,7 +17,7 @@
   </div>
 
   <div>
-    <%= f.input :comment, as: :text, label: "Comment (optional)" %>
+    <%= f.input :comment, as: :text, label: "Description" %>
   </div>
 
   <div>
@@ -25,5 +25,5 @@
     <%= f.button :submit, "Add Recipe to Category" %>
   </div>
 <% end %>
-
+<br>
 <%= link_to 'Back to Category', @category %>

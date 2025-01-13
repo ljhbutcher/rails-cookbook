@@ -1,0 +1,52 @@
+// Graphical variables
+@import "config/fonts";
+@import "config/colors";
+@import "config/bootstrap_variables";
+
+// External libraries
+@import "bootstrap";
+@import "font-awesome";
+
+// Your CSS partials
+@import "components/index";
+@import "pages/index";
+
+a {
+  text-decoration: none;
+}
+
+.navbar {
+  position: sticky;
+  top: 0;
+  background-color: #333;
+  color: #fff;
+  .navbar-brand {
+    font-size: 1.5rem;
+  }
+  .navbar-nav {
+    list-style: none;
+    padding: 0;
+    .nav-item {
+      display: inline;
+      .nav-link {
+        color: #fff;
+        text-decoration: none;
+        padding: 0 1rem;
+      }
+    }
+  }
+}
+
+.banner {
+  background: url('https://ek3286w2fxp.exactdn.com/wp-content/uploads/2023/02/cookbook-sales.jpg?strip=all&lossy=1&ssl=1') no-repeat center center;
+  background-size: cover;
+  color: #070707;
+  text-align: center;
+  padding: 5rem 0;
+  h1 {
+    font-size: 3rem;
+  }
+  p {
+    font-size: 1.5rem;
+  }
+}
