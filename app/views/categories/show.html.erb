@@ -1,0 +1,8 @@
+<h1><%= @category.name %></h1>
+
+<p><%= @category.description %></p>
+
+<%= link_to 'Add a recipe to this category', new_category_bookmark_path(@category) %>
+<br>
+<br>
+<%= link_to 'Back to Categories', categories_path %>
