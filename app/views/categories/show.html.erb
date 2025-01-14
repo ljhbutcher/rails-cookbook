@@ -1,6 +1,7 @@
-<h1><%= @category.name %></h1>
-<h3><%= @category.description %></h3>
-<%= link_to 'Add a recipe to this category', new_category_bookmark_path(@category) %>
+<h1 class="card-title"><%= @category.name %></h1>
+<h3 class="card-title"><%= @category.description %></h3>
+<%= link_to 'Add a recipe to this category', new_category_bookmark_path(@category), class: "card-title btn btn-primary" %>
+
 
 <div class="cards">
   <% @bookmarks.each do |bookmark| %>
@@ -25,4 +26,4 @@
   <% end %>
 </div>
 
-<%= link_to 'Back to Categories', categories_path %>
+<%= link_to 'Back to Categories', categories_path, class: "card-title btn btn-primary" %>

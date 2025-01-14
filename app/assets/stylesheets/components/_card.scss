@@ -2,10 +2,19 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 16px;
-  padding: 10px;
   margin: 10px;
   width: 100%;
   height: auto;
+}
+
+.card-title {
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+.card-text {
+  margin-top: 10px;
+  margin-left: 10px;
 }
 
 .card-category {
@@ -71,6 +80,7 @@
 
 .star-rating {
   direction: ltr;
+  margin-left: 10px;
   font-size: 1rem;
   unicode-bidi: bidi-override;
   display: inline-flex;
