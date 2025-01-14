@@ -1,19 +1,28 @@
 <h1><%= @category.name %></h1>
-
 <h3><%= @category.description %></h3>
+<%= link_to 'Add a recipe to this category', new_category_bookmark_path(@category) %>
 
 <div class="cards">
   <% @bookmarks.each do |bookmark| %>
     <div class="card">
         <h5 class="card-title"><%= bookmark.recipe.name %></h5>
         <p class="card-text"><%= bookmark.recipe.description %></p>
-        <%= image_tag bookmark.recipe.image_url %>
-        <%= link_to 'Delete', category_bookmark_path(@category, bookmark), class: "btn btn-danger", data: { turbo_method: :delete, data_confirm: 'Are you sure you want to remove this recipe?' } %>
+
+        <!-- Displaying Stars for Rating -->
+        <div class="star-rating">
+          <% (1..10).each do |i| %>
+            <% if i <= bookmark.recipe.rating %>
+              <i class="fas fa-star"></i> <!-- Filled star -->
+            <% else %>
+              <i class="far fa-star"></i> <!-- Empty star -->
+            <% end %>
+          <% end %>
+        </div>
+        <br>
+        <%= image_tag bookmark.recipe.image_url, class: "uniform-size" %>
+        <%= link_to 'Delete', category_bookmark_path(@category, bookmark), class: "btn btn-danger", data: { turbo_method: :delete, confirm: 'Are you sure you want to remove this recipe?' } %>
       </div>
   <% end %>
 </div>
 
-<%= link_to 'Add a recipe to this category', new_category_bookmark_path(@category) %>
-<br>
-<br>
 <%= link_to 'Back to Categories', categories_path %>

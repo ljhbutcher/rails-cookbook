@@ -1,9 +1,8 @@
 .form_container {
   display: flex;
   justify-content: center;
-  align-items: center;
-  height: calc(100vh - 60px);
-  margin-top: 6px; /* Space for header */
+  align-content: center;
+  margin-top: 10px; /* Space for header */
 }
 
 /* Card styles */
@@ -45,4 +44,15 @@
 
 .form_card button:hover {
   background-color: #e3941d;
+}
+
+.btn-secondary {
+  background-color: #ccc;
+  color: black;
+  border: none;
+  margin-top: 10px; /* Add some spacing between buttons */
+}
+
+.btn-secondary:hover {
+  background-color: #aaa;
 }

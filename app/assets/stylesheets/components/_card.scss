@@ -2,24 +2,36 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 16px;
-  background-position: center;
+  padding: 10px;
+  margin: 10px;
+  width: 100%;
+  height: auto;
 }
 
 .card-category {
   background-size: cover;
   text-decoration: none;
-  background-position: center;
-  height: 180px;
+  height: 180px; /* You already set the height here */
   margin: 10px;
+  padding: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
   color: rgb(6, 6, 6);
   font-size: 24px;
   font-weight: bold;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
   border-radius: 5px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  position: relative; /* Ensure proper alignment */
+}
+
+.uniform-size {
+  width: 100%;
+  max-height: 300px;
+  object-fit: cover;
+  justify-content: center;
+  align-items: center;
 }
 
 // Smallest device
@@ -55,4 +67,31 @@
   .cards {
     grid-template-columns: 1fr 1fr 1fr;
   }
+}
+
+.star-rating {
+  direction: ltr;
+  font-size: 1rem;
+  unicode-bidi: bidi-override;
+  display: inline-flex;
+  cursor: pointer;
+}
+
+.star-rating input[type="radio"] {
+  display: none;
+}
+
+.star-rating label {
+  color: #ccc;
+  padding: 0 5px;
+  transition: color 0.2s;
+}
+
+.star-rating input[type="radio"]:checked ~ label,
+.star-rating label:hover,
+.star-rating label:hover ~ label {
+  color: #f5b301;
+}
+.fa-star{
+  color: #f5b301
 }

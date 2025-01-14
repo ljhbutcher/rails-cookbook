@@ -1,10 +1,12 @@
 <div class="form_container">
-        <div class="form_card">
-            <h2>Add a new Category</h2>
-            <input type="text" placeholder="The category name.." />
-            <input type="file" />
-            <button>Create Category</button>
-        </div>
-    </div>
-<br>
-<%= link_to 'Back to Categories', categories_path %>
+  <div class="form_card">
+    <h2>Add a New Category</h2>
+    <%= simple_form_for @category, html: { multipart: true } do |f| %>
+      <%= f.input :name, placeholder: "The category name.." %>
+      <%= f.input :photo, as: :file, label: "Upload a photo" %>
+      <%= f.button :submit, "Create Category", class: "btn btn-primary" %>
+    <% end %>
+  </div>
+</div>
+
+<%= link_to 'Back to Categories', categories_path, class: "btn btn-secondary" %>

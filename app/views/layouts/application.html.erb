@@ -12,7 +12,7 @@
 
   <body>
     <%= render 'layouts/navbar' %>
-    <%= render 'layouts/banner' %>
+    <%= render "shared/banner" unless controller_name == "categories" && action_name == "new" %>
     <%= yield %>
   </body>
 </html>
