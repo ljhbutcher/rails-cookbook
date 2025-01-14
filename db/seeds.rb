@@ -9,7 +9,10 @@ Recipe.create!(name: "Pancakes", description: "Fluffy pancakes perfect for a wee
 
 Recipe.create!(name: "Chicken Curry", description: "A spicy and flavorful chicken curry", image_url: "https://www.allrecipes.com/thmb/4xmE8lu1TSg893xk93wk20AKJcs=/0x512/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/46822-indian-chicken-curry-ii-DDMFS-4x3-39160aaa95674ee395b9d4609e3b0988.jpg", rating: 8.2)
 
-italian = Category.create!(name: "Italian", description: "For when you need some Meditterean style!")
-salads = Category.create!(name: "Salads", description: "For when you need a healthy dish!")
-breakfast = Category.create!(name: "Breakfast", description: "To start the day right!")
-quick_easy = Category.create!(name: "Quick & Easy", description: "For when time is an issue!")
+italian = Category.create!(name: "Italian", description: "For when you need some Meditterean style!", image_url: "https://static.independent.co.uk/2024/04/25/16/iStock-1414575281.jpg?quality=75&width=1368&crop=3%3A2%2Csmart&auto=webp")
+
+salads = Category.create!(name: "Salads", description: "For when you need a healthy dish!", image_url: "https://images.immediate.co.uk/production/volatile/sites/30/2014/05/Epic-summer-salad-hub-2646e6e.jpg?quality=90&webp=true&resize=375,341")
+
+breakfast = Category.create!(name: "Breakfast", description: "To start the day right!", image_url: "https://simply-delicious-food.com/wp-content/uploads/2022/09/Breakfast-board27.jpg")
+
+quick_easy = Category.create!(name: "Quick & Easy", description: "For when time is an issue!", image_url: "https://hips.hearstapps.com/hmg-prod/images/mexican-beef-n-rice-skillet1-1665593962.jpg?crop=1.00xw:0.752xh;0,0&resize=1200:*")
